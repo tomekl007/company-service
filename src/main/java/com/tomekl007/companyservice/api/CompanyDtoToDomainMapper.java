@@ -41,8 +41,8 @@ public class CompanyDtoToDomainMapper {
                 company.getAddress(),
                 company.getCity(),
                 company.getCountry(),
-                company.getEmail(),
-                company.getPhoneNumber(),
+                company.getEmail().orElse(null),
+                company.getPhoneNumber().orElse(null),
                 map(company.getBeneficialOwners())
 
         );

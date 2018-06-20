@@ -9,8 +9,8 @@ public class CompanyDto {
     private String address;
     private String city;
     private String country;
-    private Optional<String> email;
-    private Optional<String> phoneNumber;
+    private String email;
+    private String phoneNumber;
     private List<BeneficialOwnerDto> beneficialOwners;
 
     public CompanyDto(Integer companyId,
@@ -18,8 +18,8 @@ public class CompanyDto {
                       String address,
                       String city,
                       String country,
-                      Optional<String> email,
-                      Optional<String> phoneNumber,
+                      String email,
+                      String phoneNumber,
                       List<BeneficialOwnerDto> beneficialOwners) {
         this.companyId = companyId;
         this.name = name;
@@ -74,19 +74,19 @@ public class CompanyDto {
         this.country = country;
     }
 
-    public Optional<String> getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(Optional<String> email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public Optional<String> getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Optional<String> phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

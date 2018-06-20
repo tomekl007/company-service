@@ -38,13 +38,13 @@ public class CompanyBuilder {
         return this;
     }
 
-    public CompanyBuilder setEmail(Optional<String> email) {
-        this.email = email;
+    public CompanyBuilder setEmail(String email) {
+        this.email = Optional.ofNullable(email);
         return this;
     }
 
-    public CompanyBuilder setPhoneNumber(Optional<String> phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public CompanyBuilder setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = Optional.ofNullable(phoneNumber);
         return this;
     }
 
