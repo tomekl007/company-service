@@ -1,0 +1,14 @@
+{
+  "companyId": 100,
+  "name": "company_name",
+  "address": "5 street",
+  "city": "London",
+  "country": "UK",
+  "email": "mail@com",
+  "phoneNumber": "1234567",
+  "beneficialOwners": [
+    {
+      "name": "owner_1"
+    }
+  ]
+}

@@ -1,7 +1,6 @@
 package com.tomekl007.companyservice.api;
 
 import java.util.List;
-import java.util.Optional;
 
 public class CompanyDto {
     private Integer companyId;

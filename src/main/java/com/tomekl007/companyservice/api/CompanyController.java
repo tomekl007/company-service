@@ -25,9 +25,13 @@ public class CompanyController {
     @RequestMapping(value = "/company", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> createCompany(
             @RequestBody CompanyDto companyDto) {
+        if (CompanyValidator.companyIsValid(companyDto)) {
+            companyService.createCompany(CompanyDtoToDomainMapper.mapFromDto(companyDto));
+            return ResponseEntity.ok().build();
+        }
 
-        companyService.createCompany(CompanyDtoToDomainMapper.mapFromDto(companyDto));
-        return ResponseEntity.ok().build();
+        return ResponseEntity.badRequest().build();
+
     }
 
     @RequestMapping(value = "/companies", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
