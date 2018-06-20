@@ -156,7 +156,7 @@ public class CompanyServiceIntegrationTests {
 
         //then
         assertThat(response.getStatusCode().value()).isEqualTo(200);
-        assertThat(response.getBody().size()).isEqualTo(2);
+        assertThat(response.getBody().size()).isGreaterThanOrEqualTo(2);
 
     }
 
