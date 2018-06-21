@@ -4,6 +4,12 @@
 To start all tests:
 ``./mvnw clean test`` 
 
+## Assumptions made
+I've created the ``CompanyRepository`` interface that is an abstraction for data storage.
+For a case of simplicity of an exercise I've implemented in-memory storage ``CompanyRepositoryInMemory``
+In the production ready application the ``CompanyRepository`` interface should be implement as
+database backed storage.
+
 ## CURL
 To create new company:
 ``curl -X POST -H "Content-Type: application/json" -d @exampleCompany.json https://company-micro-service.herokuapp.com/company``
@@ -46,10 +52,3 @@ to only healthy instances.
 2. If we are using i.e. AWS for our infrastructure we can deploy 
 some instances in one zone(dc) i.e. europe and other in other dc to reduce 
 probability of failure if one dc is down  
-
-
-## Assumptions made
-I've created the ``CompanyRepository`` interface that is an abstraction for data storage.
-For a case of simplicity of an exercise I've implemented in-memory storage ``CompanyRepositoryInMemory``
-In the production ready application the ``CompanyRepository`` interface should be implement as
-database backed storage.
